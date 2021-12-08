@@ -1,6 +1,6 @@
 
 <h1 align= "center" >
-    # Database farmacia
+    Database Farmacia
 </h1>
 
 Requisitos para o projeto: **[Requisitos](https://drive.google.com/file/d/1bbQjxiyCrc8LGA6VKNtMoBnrqDcT1mJs/view)**
