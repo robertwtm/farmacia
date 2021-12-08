@@ -21,11 +21,18 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/produto")
 @CrossOrigin("*")
 public class ProdutoController {
-	
+
+
+	/*
+		Class controller do Produto
+		@author GiovanaBorges
+	 */
+
+
 	@Autowired
 	private ProdutoRepository repository;
 	
-	@GetMapping("/produto")
+	@GetMapping("/produtos")
 	public ResponseEntity<List<Produto>> findAllProduto() {		
 		return ResponseEntity.ok(repository.findAll ());
 	}
@@ -39,7 +46,7 @@ public class ProdutoController {
 	
 	@GetMapping("/descricao/{descricao}")
 	public ResponseEntity<List<Produto>> findByDescricaoProduto(@PathVariable String descricao) {
-		return ResponseEntity.ok(repository.findAllByDescricaoProdutoContainingIgnoreCase(descricao));
+		return ResponseEntity.ok(repository.findAllByProdutoDescricaoContainingIgnoreCase(descricao));
 	}
 	
 	@PostMapping()

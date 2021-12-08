@@ -21,6 +21,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/")
 @CrossOrigin("*")
 public class CategoriaController {
+
+	/*
+		Class controller da categoria
+		@author GiovanaBorges
+	 */
 	
 	@Autowired
 	private CategoriaRepository repository; 
