@@ -20,12 +20,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/produto")
 @CrossOrigin("*")
+
 public class ProdutoController {
 
 
 	/*
 		Class controller do Produto
-		@author GiovanaBorges
+		@author @GiovanaBorges
 	 */
 
 
