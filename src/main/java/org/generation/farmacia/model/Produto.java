@@ -1,7 +1,5 @@
 package org.generation.farmacia.model;
 
-import java.util.List;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,8 +10,8 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Entity
-@Table(name = "tb_categoria")
-public class Categoria {
+@Table(name = "tb_produto")
+public class Produto {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,14 +20,12 @@ public class Categoria {
 	@NotNull
 	@NotBlank
 	@Size(min = 5, max = 25)
-	private String nome;
+	private String produto;
 	
 	@NotNull
 	@NotBlank
 	@Size(min = 5, max = 255)
-	private String descricaoCategoria;
-	
-	//private List<Produto> produto;
+	private String produtoCategoria;
 
 	public Long getId() {
 		return id;
@@ -39,20 +35,23 @@ public class Categoria {
 		this.id = id;
 	}
 
-	public String getNome() {
-		return nome;
+	public String getProduto() {
+		return produto;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setProduto(String produto) {
+		this.produto = produto;
 	}
 
-	public String getDescricaoCategoria() {
-		return descricaoCategoria;
+	public String getProdutoCategoria() {
+		return produtoCategoria;
 	}
 
-	public void setDescricaoCategoria(String descricaoCategoria) {
-		this.descricaoCategoria = descricaoCategoria;
+	public void setProdutoCategoria(String produtoCategoria) {
+		this.produtoCategoria = produtoCategoria;
 	}
 	
+	
+	
+
 }
