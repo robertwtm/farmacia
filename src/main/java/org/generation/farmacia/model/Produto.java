@@ -27,6 +27,16 @@ public class Produto {
 	@Size(min = 5, max = 255)
 	private String produtoCategoria;
 
+	@NotNull
+	private String produtoDescricao;
+
+	@NotNull
+	private float produtoPreco;
+
+	@NotNull
+	private String produtoMarca;
+
+
 	public Long getId() {
 		return id;
 	}
@@ -50,8 +60,21 @@ public class Produto {
 	public void setProdutoCategoria(String produtoCategoria) {
 		this.produtoCategoria = produtoCategoria;
 	}
-	
-	
-	
 
+
+	public float getProdutoPreco() {
+		return produtoPreco;
+	}
+
+	public void setProdutoPreco(float produtoPreco) {
+		this.produtoPreco = produtoPreco;
+	}
+
+	public String getProdutoMarca() {
+		return produtoMarca;
+	}
+
+	public void setProdutoMarca(String produtoMarca) {
+		this.produtoMarca = produtoMarca;
+	}
 }
