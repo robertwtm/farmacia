@@ -7,7 +7,6 @@ Requisitos para o projeto: **[Requisitos](https://drive.google.com/file/d/1bbQjx
 
 Grupo: Giovana, Robert, Thiago, Anderson e Augusto
 
-<br>
 
 <h3 align= "center" >
 Preview : 
