@@ -12,4 +12,4 @@ Grupo: Giovana, Robert, Thiago, Anderson e Augusto
 <h3 align= "center" >
 Preview : 
 </h3>
-<img width="90%" height="auto" src="./assets/db.png" height="175px"/>
+<img width="90%" height="auto" src="preview.png" height="175px"/>
