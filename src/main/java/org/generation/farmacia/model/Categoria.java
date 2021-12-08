@@ -12,7 +12,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Entity
-@Table(name = "categoria")
+@Table(name = "tb_categoria")
 public class Categoria {
 	
 	@Id
