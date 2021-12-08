@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/")
+@RequestMapping("/categoria")
 @CrossOrigin("*")
 public class CategoriaController {
 
@@ -30,7 +30,7 @@ public class CategoriaController {
 	@Autowired
 	private CategoriaRepository repository; 
 	
-	@GetMapping("/categoria") 
+	@GetMapping 
 	public ResponseEntity<List<Categoria>> findAllCategoria() {		
 		return ResponseEntity.ok(repository.findAll ());
 	}
@@ -47,7 +47,7 @@ public class CategoriaController {
 		return ResponseEntity.ok(repository.findAllByDescricaoCategoriaContainingIgnoreCase(descricao));
 	}
 	
-	@PostMapping()
+	@PostMapping
 	public ResponseEntity<Categoria> postCategoria(@RequestBody Categoria categoria) {
 		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(categoria));
 	}
