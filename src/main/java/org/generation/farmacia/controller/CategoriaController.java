@@ -30,7 +30,7 @@ public class CategoriaController {
 	@Autowired
 	private CategoriaRepository repository; 
 	
-	@GetMapping("/categoria") 
+	@GetMapping 
 	public ResponseEntity<List<Categoria>> findAllCategoria() {		
 		return ResponseEntity.ok(repository.findAll ());
 	}
@@ -47,7 +47,7 @@ public class CategoriaController {
 		return ResponseEntity.ok(repository.findAllByDescricaoCategoriaContainingIgnoreCase(descricao));
 	}
 	
-	@PostMapping()
+	@PostMapping
 	public ResponseEntity<Categoria> postCategoria(@RequestBody Categoria categoria) {
 		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(categoria));
 	}
