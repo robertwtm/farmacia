@@ -1,5 +1,12 @@
 package org.generation.farmacia.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -10,8 +17,13 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+@Data
+@Getter
+@Builder
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "tb_produto")
 public class Produto {
@@ -38,66 +50,8 @@ public class Produto {
 
 	@NotNull
 	private String produtoMarca;
-	
+
 	@ManyToOne
-	@JsonIgnoreProperties("produtos")
 	private Categoria categoria;
 
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public String getProduto() {
-		return produto;
-	}
-
-	public void setProduto(String produto) {
-		this.produto = produto;
-	}
-
-	public String getProdutoCategoria() {
-		return produtoCategoria;
-	}
-
-	public void setProdutoCategoria(String produtoCategoria) {
-		this.produtoCategoria = produtoCategoria;
-	}
-
-
-	public float getProdutoPreco() {
-		return produtoPreco;
-	}
-
-	public void setProdutoPreco(float produtoPreco) {
-		this.produtoPreco = produtoPreco;
-	}
-
-	public String getProdutoMarca() {
-		return produtoMarca;
-	}
-
-	public void setProdutoMarca(String produtoMarca) {
-		this.produtoMarca = produtoMarca;
-	}
-
-	public String getProdutoDescricao() {
-		return produtoDescricao;
-	}
-
-	public void setProdutoDescricao(String produtoDescricao) {
-		this.produtoDescricao = produtoDescricao;
-	}
-
-	public Categoria getCategoria() {
-		return categoria;
-	}
-
-	public void setCategoria(Categoria categoria) {
-		this.categoria = categoria;
-	}
 }
