@@ -31,7 +31,7 @@ public class CategoriaController {
 	private CategoriaRepository repository; 
 	
 	@GetMapping 
-	public ResponseEntity<List<Categoria>> findAllCategoria() {		
+	public ResponseEntity<List<Categoria>> findAllCategoria() {
 		return ResponseEntity.ok(repository.findAll ());
 	}
 	
